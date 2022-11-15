@@ -167,6 +167,29 @@
   
   <entry>
     <title>RobotCAM:问题记录</title>
+    <link href="http://lucaslyf.gitee.io/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://lucaslyf.gitee.io/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <published>2021-07-30T18:03:22.000Z</published>
+    <updated>2022-11-15T09:32:48.082Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;此贴主要记录RobotCAM软件开发过程中遇到的奇怪和难点问题。</p><h2 id="QtCreator-Debug模式下加载QFileDialog十分缓慢"><a href="#QtCreator-Debug模式下加载QFileDialog十分缓慢" class="headerlink" title="QtCreator Debug模式下加载QFileDialog十分缓慢"></a>QtCreator Debug模式下加载QFileDialog十分缓慢</h2><p>&emsp;&emsp;排查后发现程序没有问题、环境配置没有问题。重装VS和QT后还是无效。怀疑是注册表清理出问题，查看注册表基本确定问题不是由注册表引起。最后发现QtCreator中有无效断点（断点列表里存在断点，双击跟进断点位置不在代码处）。清空无效断点后程序运行正常。算是QtCreator的一个BUG，记录一下。</p><h2 id="Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误"><a href="#Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误" class="headerlink" title="Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误"></a>Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">bool GetConvertData(std::list&lt;Convert::Region2d*&gt;&amp; loops, const char * szPath)&#123;    if (!szPath)        return false;    std::ifstream binary_sstream(szPath, std::ios::binary | std::ios::in);&#x2F;&#x2F;读取文件    &quot;std::string sdd;&quot;    if (binary_sstream.is_open()&amp;&amp; binary_sstream.good())&#x2F;&#x2F;判断文件是否打开以及是否合法    &#123;        boost::archive::xml_iarchive binary_oa(binary_sstream);&#x2F;&#x2F;将文件流序列化        try        &#123;            ...        &#125;        catch (boost::archive::archive_exception const&amp; e)        &#123;            binary_sstream.close();            return false;        &#125;        &quot;binary_sstream&gt;&gt;sdd;&quot;        binary_sstream.close();&#x2F;&#x2F;关闭文件流        return true;&#x2F;&#x2F;返回值，进入析构函数        &#x2F;&#x2F;运行到这里.bin文件中的数据已经全部拿到，但是xml_iarchive析构函数抛出异常    &#125;    return false;&#125;</code></pre><p>&emsp;&emsp;分析可能是高版本Boost库特性导致，文件流打开文件后没有调用，直接关闭后数据没有正常析构。因此导致xml_iarchive认为文件流没有正常关闭，抛出异常。添加引号中调用文件流代码后程序正常运行。   </p><h2 id="Qt运行提示”无法打开rc-exe”"><a href="#Qt运行提示”无法打开rc-exe”" class="headerlink" title="Qt运行提示”无法打开rc.exe”"></a>Qt运行提示”无法打开rc.exe”</h2><p><img src="%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80rc.exe.png" alt="Qt设置"></p><p>&emsp;&emsp;确认完整搭建好环境后，打开QtCreator，进入：工具-&gt;选项-&gt;构建和运行。取消勾选如图所示红框处即可。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h2&gt;&lt;p&gt;&amp;emsp;&amp;emsp;此贴主要记录RobotCAM软件开发过程中遇到的奇怪和难点问题。&lt;/p&gt;
+&lt;h2 id=&quot;QtCreator-Deb</summary>
+      
+    
+    
+    
+    <category term="RobotCAM软件开发" scheme="http://lucaslyf.gitee.io/categories/RobotCAM%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>RobotCAM:问题记录</title>
     <link href="http://lucaslyf.gitee.io/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
     <id>http://lucaslyf.gitee.io/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
     <published>2021-07-30T18:03:22.000Z</published>

@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Lucrame:问题记录</title>
-    <url>/2022/03/06/Lucrame-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;此贴主要记录Lucrame跨平台应用框架开发过程中遇到的奇怪和难点问题。</p>
-<h2 id="Mac平台-Lucram在QtCreator中Debug闪退"><a href="#Mac平台-Lucram在QtCreator中Debug闪退" class="headerlink" title="(Mac平台)Lucram在QtCreator中Debug闪退"></a>(Mac平台)Lucram在QtCreator中Debug闪退</h2><p>&emsp;&emsp;因为项目设置了文件结构，会将生成目录下所需文件复制到指定目录。如果先直接运行，会在指定目录生成Lucrame可执行文件。此时再进行Debug，Qt检测到指定目录下存在同名文件，不会直接替换，而选择直接对其Debug，但运行生成的可执行文件和Debug生成的可执行文件有差异，因此无法Debug，导致直接闪退。此时只需要将指定目录下运行生成的Lucrame可执行文件删除，再进行Debug操作即可。</p>
-]]></content>
-      <categories>
-        <category>Lucrame跨平台CAM应用框架</category>
-      </categories>
-  </entry>
-  <entry>
     <title>Lucrame:(一)环境搭建</title>
     <url>/2022/03/03/Lucrame-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;Lucrame跨平台CAM应用框架基于Qt6.2.3进行搭建，使用qmake进行项目管理(目前已经在<code>macOS M1 Big Sur </code>和<code>Window10</code>平台进行测试)。基于QT插件系统框架，该应用框架也将采用插件模式进行开发（也可以直接在主框架中修改源码开发，建议采用插件方式开发，有利于模块划分和功能扩展）。<br>接下来详细介绍SDK包的环境搭建步骤。</p>
@@ -48,41 +38,13 @@
       </categories>
   </entry>
   <entry>
-    <title>RobotCAM:问题记录</title>
-    <url>/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;此贴主要记录RobotCAM软件开发过程中遇到的奇怪和难点问题。</p>
-<h2 id="QtCreator-Debug模式下加载QFileDialog十分缓慢"><a href="#QtCreator-Debug模式下加载QFileDialog十分缓慢" class="headerlink" title="QtCreator Debug模式下加载QFileDialog十分缓慢"></a>QtCreator Debug模式下加载QFileDialog十分缓慢</h2><p>&emsp;&emsp;排查后发现程序没有问题、环境配置没有问题。重装VS和QT后还是无效。怀疑是注册表清理出问题，查看注册表基本确定问题不是由注册表引起。最后发现QtCreator中有无效断点（断点列表里存在断点，双击跟进断点位置不在代码处）。清空无效断点后程序运行正常。算是QtCreator的一个BUG，记录一下。</p>
-<h2 id="Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误"><a href="#Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误" class="headerlink" title="Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误"></a>Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">bool GetConvertData(std::list&lt;Convert::Region2d*&gt;&amp; loops, const char * szPath)
-&#123;
-    if (!szPath)
-        return false;
-    std::ifstream binary_sstream(szPath, std::ios::binary | std::ios::in);&#x2F;&#x2F;读取文件
-    &quot;std::string sdd;&quot;
-    if (binary_sstream.is_open()&amp;&amp; binary_sstream.good())&#x2F;&#x2F;判断文件是否打开以及是否合法
-    &#123;
-        boost::archive::xml_iarchive binary_oa(binary_sstream);&#x2F;&#x2F;将文件流序列化
-        try
-        &#123;
-            ...
-        &#125;
-        catch (boost::archive::archive_exception const&amp; e)
-        &#123;
-            binary_sstream.close();
-            return false;
-        &#125;
-        &quot;binary_sstream&gt;&gt;sdd;&quot;
-        binary_sstream.close();&#x2F;&#x2F;关闭文件流
-        return true;&#x2F;&#x2F;返回值，进入析构函数
-        &#x2F;&#x2F;运行到这里.bin文件中的数据已经全部拿到，但是xml_iarchive析构函数抛出异常
-    &#125;
-    return false;
-&#125;</code></pre>
-<p>&emsp;&emsp;分析可能是高版本Boost库特性导致，文件流打开文件后没有调用，直接关闭后数据没有正常析构。因此导致xml_iarchive认为文件流没有正常关闭，抛出异常。添加引号中调用文件流代码后程序正常运行。   </p>
-<h2 id="Qt运行提示”无法打开rc-exe”"><a href="#Qt运行提示”无法打开rc-exe”" class="headerlink" title="Qt运行提示”无法打开rc.exe”"></a>Qt运行提示”无法打开rc.exe”</h2><p><img src="%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80rc.exe.png" alt="Qt设置"></p>
-<p>&emsp;&emsp;确认完整搭建好环境后，打开QtCreator，进入：工具-&gt;选项-&gt;构建和运行。取消勾选如图所示红框处即可。</p>
+    <title>Lucrame:问题记录</title>
+    <url>/2022/03/06/Lucrame-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;此贴主要记录Lucrame跨平台应用框架开发过程中遇到的奇怪和难点问题。</p>
+<h2 id="Mac平台-Lucram在QtCreator中Debug闪退"><a href="#Mac平台-Lucram在QtCreator中Debug闪退" class="headerlink" title="(Mac平台)Lucram在QtCreator中Debug闪退"></a>(Mac平台)Lucram在QtCreator中Debug闪退</h2><p>&emsp;&emsp;因为项目设置了文件结构，会将生成目录下所需文件复制到指定目录。如果先直接运行，会在指定目录生成Lucrame可执行文件。此时再进行Debug，Qt检测到指定目录下存在同名文件，不会直接替换，而选择直接对其Debug，但运行生成的可执行文件和Debug生成的可执行文件有差异，因此无法Debug，导致直接闪退。此时只需要将指定目录下运行生成的Lucrame可执行文件删除，再进行Debug操作即可。</p>
 ]]></content>
       <categories>
-        <category>RobotCAM软件开发</category>
+        <category>Lucrame跨平台CAM应用框架</category>
       </categories>
   </entry>
   <entry>
@@ -426,6 +388,60 @@ bool pbcDisplayInterface::AdjustParameterDisplay()
       </categories>
   </entry>
   <entry>
+    <title>RobotCAM:问题记录</title>
+    <url>/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;此贴主要记录RobotCAM软件开发过程中遇到的奇怪和难点问题。</p>
+<h2 id="QtCreator-Debug模式下加载QFileDialog十分缓慢"><a href="#QtCreator-Debug模式下加载QFileDialog十分缓慢" class="headerlink" title="QtCreator Debug模式下加载QFileDialog十分缓慢"></a>QtCreator Debug模式下加载QFileDialog十分缓慢</h2><p>&emsp;&emsp;排查后发现程序没有问题、环境配置没有问题。重装VS和QT后还是无效。怀疑是注册表清理出问题，查看注册表基本确定问题不是由注册表引起。最后发现QtCreator中有无效断点（断点列表里存在断点，双击跟进断点位置不在代码处）。清空无效断点后程序运行正常。算是QtCreator的一个BUG，记录一下。</p>
+<h2 id="Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误"><a href="#Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误" class="headerlink" title="Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误"></a>Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">bool GetConvertData(std::list&lt;Convert::Region2d*&gt;&amp; loops, const char * szPath)
+&#123;
+    if (!szPath)
+        return false;
+    std::ifstream binary_sstream(szPath, std::ios::binary | std::ios::in);&#x2F;&#x2F;读取文件
+    &quot;std::string sdd;&quot;
+    if (binary_sstream.is_open()&amp;&amp; binary_sstream.good())&#x2F;&#x2F;判断文件是否打开以及是否合法
+    &#123;
+        boost::archive::xml_iarchive binary_oa(binary_sstream);&#x2F;&#x2F;将文件流序列化
+        try
+        &#123;
+            ...
+        &#125;
+        catch (boost::archive::archive_exception const&amp; e)
+        &#123;
+            binary_sstream.close();
+            return false;
+        &#125;
+        &quot;binary_sstream&gt;&gt;sdd;&quot;
+        binary_sstream.close();&#x2F;&#x2F;关闭文件流
+        return true;&#x2F;&#x2F;返回值，进入析构函数
+        &#x2F;&#x2F;运行到这里.bin文件中的数据已经全部拿到，但是xml_iarchive析构函数抛出异常
+    &#125;
+    return false;
+&#125;</code></pre>
+<p>&emsp;&emsp;分析可能是高版本Boost库特性导致，文件流打开文件后没有调用，直接关闭后数据没有正常析构。因此导致xml_iarchive认为文件流没有正常关闭，抛出异常。添加引号中调用文件流代码后程序正常运行。   </p>
+<h2 id="Qt运行提示”无法打开rc-exe”"><a href="#Qt运行提示”无法打开rc-exe”" class="headerlink" title="Qt运行提示”无法打开rc.exe”"></a>Qt运行提示”无法打开rc.exe”</h2><p><img src="%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80rc.exe.png" alt="Qt设置"></p>
+<p>&emsp;&emsp;确认完整搭建好环境后，打开QtCreator，进入：工具-&gt;选项-&gt;构建和运行。取消勾选如图所示红框处即可。</p>
+]]></content>
+      <categories>
+        <category>RobotCAM软件开发</category>
+      </categories>
+  </entry>
+  <entry>
+    <title>RobotCAM:(一)环境搭建</title>
+    <url>/2021/08/01/RobotCAM-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;RobotCAM机器人轨迹仿真平台基于Qt5.14.2进行搭建，使用CMake进行第三方库管理。<br>&emsp;&emsp;需要安装VS2017、Qt5.14.2两个软件。<br>&emsp;&emsp;第三方库直接使用我配置好的即可。</p>
+<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="VS2017安装"><a href="#VS2017安装" class="headerlink" title="VS2017安装"></a>VS2017安装</h3><p>&emsp;&emsp;<a href="https://msdn.itellyou.cn/">MSDN神站下载</a>，进入如图所示页面，选择VS2017任意版本进行下载（推荐安装专业版）。<br><img src="VS2017%E4%B8%8B%E8%BD%BD.jpg" alt="VS2017下载"><br>&emsp;&emsp;下载完成后，打开在线安装包（安装完成后不要删掉安装包，方便以后进行组件修改），按照如图所示配置。<br><img src="VS2017%E5%AE%89%E8%A3%85.jpg" alt="VS2017安装"></p>
+<h3 id="Qt安装"><a href="#Qt安装" class="headerlink" title="Qt安装"></a>Qt安装</h3><p>&emsp;&emsp;<a href="https://www.qt.io/download">Qt官网进行下载</a>，注册一个自己的账号，点击如图所示进行Qt在线安装包下载。<br><img src="%E4%B8%8B%E8%BD%BDQt.jpg" alt="Qt下载"><br>&emsp;&emsp;Qt安装方式为在线安装，可能比较慢，耐心等待一下就好。后期修改版本或者增添新组件比较方便。<br>&emsp;&emsp;下载完成后打开Qt在线安装，按照如图所示，勾选红框处，其余保持默认。<br><img src="Qt%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE.jpg" alt="Qt安装"></p>
+<h3 id="Qt运行测试"><a href="#Qt运行测试" class="headerlink" title="Qt运行测试"></a>Qt运行测试</h3><p>&emsp;&emsp;安装完VS2017和Qt5.14.2后，打开QtCreator，进入如图所示界面，搜索“sdi”案例。<br><img src="Qt%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95.jpg" alt="Qt测试"><br>&emsp;&emsp;保持默认配置，F5运行sdi案例，若能成功运行，没有报错，即完成软件安装。</p>
+<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>&emsp;&emsp;在Q群中下载我提供的基本平台源码，直接解压到“D:\”，即D盘根目录下。（最好保持目录结构和图片一致）<br><img src="%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.jpg" alt="文件结构"><br>&emsp;&emsp;打开“环境变量和QT设置.txt”按照内容进行配置。</p>
+<h3 id="Path设置"><a href="#Path设置" class="headerlink" title="Path设置"></a>Path设置</h3><p>&emsp;&emsp;右键“此电脑”-&gt;属性-&gt;高级系统设置-&gt;环境变量，进入如图所示页面。<br><img src="Path%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="Path变量"><br>&emsp;&emsp;双击红框处，添加Path路径，将“环境变量和QT设置.txt”对应内容填入，如果路径不同，根据自己的情况修改。<br>&emsp;&emsp;配置完后如图所示。（前期入门训练只用到了VTK库，Evaluation(v1.0)没有提供其他的第三方库，可以只设置VTK的环境变量，全部设置好也没影响）<br><img src="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE.jpg" alt="环境变量"></p>
+<h2 id="软件平台运行测试"><a href="#软件平台运行测试" class="headerlink" title="软件平台运行测试"></a>软件平台运行测试</h2><p>&emsp;&emsp;做完以上所有操作后，打开QtCreator-&gt;工具-&gt;选项-&gt;构建和运行，修改为如图所示配置。<br><img src="Qt%E8%AE%BE%E7%BD%AE.jpg" alt="Qt设置"><br>&emsp;&emsp;接着点击“打开”，选择如图所示“CMakeLists.txt”文件。<br><img src="%E8%BD%AF%E4%BB%B6%E5%B9%B3%E5%8F%B0%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95.jpg" alt="运行测试"><br>&emsp;&emsp;然后F5运行，如果没有报错，且界面交互一切正常，则配置完成。（成功运行后界面如图所示）<br><img src="%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.jpg" alt="成功运行"></p>
+<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><p>&emsp;&emsp;1.VS2017组件安装缺失。<br>&emsp;&emsp;2.QT版本冲突导致qmake使用的是旧版本，无法匹配。<br>&emsp;&emsp;3.修改了文件名，导致CMake路径配置错误。</p>
+]]></content>
+      <categories>
+        <category>RobotCAM软件开发</category>
+      </categories>
+  </entry>
+  <entry>
     <title>RobotCAM:(二)CMake简单介绍</title>
     <url>/2021/08/02/RobotCAM-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</url>
     <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
@@ -445,16 +461,38 @@ bool pbcDisplayInterface::AdjustParameterDisplay()
       </categories>
   </entry>
   <entry>
-    <title>RobotCAM:(一)环境搭建</title>
-    <url>/2021/08/01/RobotCAM-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;RobotCAM机器人轨迹仿真平台基于Qt5.14.2进行搭建，使用CMake进行第三方库管理。<br>&emsp;&emsp;需要安装VS2017、Qt5.14.2两个软件。<br>&emsp;&emsp;第三方库直接使用我配置好的即可。</p>
-<h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><h3 id="VS2017安装"><a href="#VS2017安装" class="headerlink" title="VS2017安装"></a>VS2017安装</h3><p>&emsp;&emsp;<a href="https://msdn.itellyou.cn/">MSDN神站下载</a>，进入如图所示页面，选择VS2017任意版本进行下载（推荐安装专业版）。<br><img src="VS2017%E4%B8%8B%E8%BD%BD.jpg" alt="VS2017下载"><br>&emsp;&emsp;下载完成后，打开在线安装包（安装完成后不要删掉安装包，方便以后进行组件修改），按照如图所示配置。<br><img src="VS2017%E5%AE%89%E8%A3%85.jpg" alt="VS2017安装"></p>
-<h3 id="Qt安装"><a href="#Qt安装" class="headerlink" title="Qt安装"></a>Qt安装</h3><p>&emsp;&emsp;<a href="https://www.qt.io/download">Qt官网进行下载</a>，注册一个自己的账号，点击如图所示进行Qt在线安装包下载。<br><img src="%E4%B8%8B%E8%BD%BDQt.jpg" alt="Qt下载"><br>&emsp;&emsp;Qt安装方式为在线安装，可能比较慢，耐心等待一下就好。后期修改版本或者增添新组件比较方便。<br>&emsp;&emsp;下载完成后打开Qt在线安装，按照如图所示，勾选红框处，其余保持默认。<br><img src="Qt%E5%AE%89%E8%A3%85%E8%AE%BE%E7%BD%AE.jpg" alt="Qt安装"></p>
-<h3 id="Qt运行测试"><a href="#Qt运行测试" class="headerlink" title="Qt运行测试"></a>Qt运行测试</h3><p>&emsp;&emsp;安装完VS2017和Qt5.14.2后，打开QtCreator，进入如图所示界面，搜索“sdi”案例。<br><img src="Qt%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95.jpg" alt="Qt测试"><br>&emsp;&emsp;保持默认配置，F5运行sdi案例，若能成功运行，没有报错，即完成软件安装。</p>
-<h2 id="环境配置"><a href="#环境配置" class="headerlink" title="环境配置"></a>环境配置</h2><p>&emsp;&emsp;在Q群中下载我提供的基本平台源码，直接解压到“D:\”，即D盘根目录下。（最好保持目录结构和图片一致）<br><img src="%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84.jpg" alt="文件结构"><br>&emsp;&emsp;打开“环境变量和QT设置.txt”按照内容进行配置。</p>
-<h3 id="Path设置"><a href="#Path设置" class="headerlink" title="Path设置"></a>Path设置</h3><p>&emsp;&emsp;右键“此电脑”-&gt;属性-&gt;高级系统设置-&gt;环境变量，进入如图所示页面。<br><img src="Path%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.jpg" alt="Path变量"><br>&emsp;&emsp;双击红框处，添加Path路径，将“环境变量和QT设置.txt”对应内容填入，如果路径不同，根据自己的情况修改。<br>&emsp;&emsp;配置完后如图所示。（前期入门训练只用到了VTK库，Evaluation(v1.0)没有提供其他的第三方库，可以只设置VTK的环境变量，全部设置好也没影响）<br><img src="%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F%E8%AE%BE%E7%BD%AE.jpg" alt="环境变量"></p>
-<h2 id="软件平台运行测试"><a href="#软件平台运行测试" class="headerlink" title="软件平台运行测试"></a>软件平台运行测试</h2><p>&emsp;&emsp;做完以上所有操作后，打开QtCreator-&gt;工具-&gt;选项-&gt;构建和运行，修改为如图所示配置。<br><img src="Qt%E8%AE%BE%E7%BD%AE.jpg" alt="Qt设置"><br>&emsp;&emsp;接着点击“打开”，选择如图所示“CMakeLists.txt”文件。<br><img src="%E8%BD%AF%E4%BB%B6%E5%B9%B3%E5%8F%B0%E8%BF%90%E8%A1%8C%E6%B5%8B%E8%AF%95.jpg" alt="运行测试"><br>&emsp;&emsp;然后F5运行，如果没有报错，且界面交互一切正常，则配置完成。（成功运行后界面如图所示）<br><img src="%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8C.jpg" alt="成功运行"></p>
-<h2 id="常见错误"><a href="#常见错误" class="headerlink" title="常见错误"></a>常见错误</h2><p>&emsp;&emsp;1.VS2017组件安装缺失。<br>&emsp;&emsp;2.QT版本冲突导致qmake使用的是旧版本，无法匹配。<br>&emsp;&emsp;3.修改了文件名，导致CMake路径配置错误。</p>
+    <title>RobotCAM:问题记录</title>
+    <url>/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</url>
+    <content><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;此贴主要记录RobotCAM软件开发过程中遇到的奇怪和难点问题。</p>
+<h2 id="QtCreator-Debug模式下加载QFileDialog十分缓慢"><a href="#QtCreator-Debug模式下加载QFileDialog十分缓慢" class="headerlink" title="QtCreator Debug模式下加载QFileDialog十分缓慢"></a>QtCreator Debug模式下加载QFileDialog十分缓慢</h2><p>&emsp;&emsp;排查后发现程序没有问题、环境配置没有问题。重装VS和QT后还是无效。怀疑是注册表清理出问题，查看注册表基本确定问题不是由注册表引起。最后发现QtCreator中有无效断点（断点列表里存在断点，双击跟进断点位置不在代码处）。清空无效断点后程序运行正常。算是QtCreator的一个BUG，记录一下。</p>
+<h2 id="Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误"><a href="#Boost1-75版本库使用-boost-archive-xml-iarchive序列化时析构函数抛出错误" class="headerlink" title="Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误"></a>Boost1_75版本库使用 boost::archive::xml_iarchive序列化时析构函数抛出错误</h2><pre class="line-numbers language-cpp" data-language="cpp"><code class="language-cpp">bool GetConvertData(std::list&lt;Convert::Region2d*&gt;&amp; loops, const char * szPath)
+&#123;
+    if (!szPath)
+        return false;
+    std::ifstream binary_sstream(szPath, std::ios::binary | std::ios::in);&#x2F;&#x2F;读取文件
+    &quot;std::string sdd;&quot;
+    if (binary_sstream.is_open()&amp;&amp; binary_sstream.good())&#x2F;&#x2F;判断文件是否打开以及是否合法
+    &#123;
+        boost::archive::xml_iarchive binary_oa(binary_sstream);&#x2F;&#x2F;将文件流序列化
+        try
+        &#123;
+            ...
+        &#125;
+        catch (boost::archive::archive_exception const&amp; e)
+        &#123;
+            binary_sstream.close();
+            return false;
+        &#125;
+        &quot;binary_sstream&gt;&gt;sdd;&quot;
+        binary_sstream.close();&#x2F;&#x2F;关闭文件流
+        return true;&#x2F;&#x2F;返回值，进入析构函数
+        &#x2F;&#x2F;运行到这里.bin文件中的数据已经全部拿到，但是xml_iarchive析构函数抛出异常
+    &#125;
+    return false;
+&#125;</code></pre>
+<p>&emsp;&emsp;分析可能是高版本Boost库特性导致，文件流打开文件后没有调用，直接关闭后数据没有正常析构。因此导致xml_iarchive认为文件流没有正常关闭，抛出异常。添加引号中调用文件流代码后程序正常运行。   </p>
+<h2 id="Qt运行提示”无法打开rc-exe”"><a href="#Qt运行提示”无法打开rc-exe”" class="headerlink" title="Qt运行提示”无法打开rc.exe”"></a>Qt运行提示”无法打开rc.exe”</h2><p><img src="%E6%97%A0%E6%B3%95%E6%89%93%E5%BC%80rc.exe.png" alt="Qt设置"></p>
+<p>&emsp;&emsp;确认完整搭建好环境后，打开QtCreator，进入：工具-&gt;选项-&gt;构建和运行。取消勾选如图所示红框处即可。</p>
 ]]></content>
       <categories>
         <category>RobotCAM软件开发</category>

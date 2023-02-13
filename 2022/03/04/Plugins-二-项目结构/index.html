@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="en" data-theme="dark"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Lucrame:(二)项目结构 | LucasLYF</title><meta name="author" content="人是鳄鱼的子孙"><meta name="copyright" content="人是鳄鱼的子孙"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#0d0d0d"><meta name="description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Lucrame:(二)项目结构">
+<meta property="og:url" content="http://lucaslyf.gitee.io/2022/03/04/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/index.html">
+<meta property="og:site_name" content="LucasLYF">
+<meta property="og:description" content="Here&#39;s something encrypted, password is required to continue reading.">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://lucaslyf.gitee.io/transparent">
+<meta property="article:published_time" content="2022-03-04T15:40:31.000Z">
+<meta property="article:modified_time" content="2022-11-22T13:30:58.842Z">
+<meta property="article:author" content="人是鳄鱼的子孙">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://lucaslyf.gitee.io/transparent"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://lucaslyf.gitee.io/2022/03/04/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"We didn't find any results for the search: ${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: 'Copy successfully',
+    error: 'Copy error',
+    noSupport: 'The browser does not support'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: 'days',
+  date_suffix: {
+    just: 'Just',
+    min: 'minutes ago',
+    hour: 'hours ago',
+    day: 'days ago',
+    month: 'months ago'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"Author: 人是鳄鱼的子孙","link":"Link: ","source":"Source: LucasLYF","info":"Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source."}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    jQuery: 'https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js',
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/js/jquery.justifiedGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/justifiedGallery/dist/css/justifiedGallery.min.css'
+    },
+    fancybox: {
+      js: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.css'
+    }
+  },
+  isPhotoFigcaption: true,
+  islazyload: false,
+  isanchor: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = { 
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2022-11-22 21:30:58'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const fontSizeVal = saveToLocal.get('global-font-size')
+    if (fontSizeVal !== undefined) {
+      document.documentElement.style.setProperty('--global-font-size', fontSizeVal + 'px')
+    }
+    })(window)</script><style> body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {margin:0; padding:0} video#bgvid{ position:fixed; right:0; top:0; min-width:100%; min-height:100%; width:auto; height:auto; z-index:-100; background-size:cover; } video{display:block;} </style><meta name="generator" content="Hexo 5.4.0"><link rel="alternate" href="/atom.xml" title="LucasLYF" type="application/atom+xml">
+</head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">Loading...</div></div></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="author-avatar"><img class="avatar-img" src="https://tvax4.sinaimg.cn/crop.0.0.750.750.180/9fbc9bb5ly8gki8fc76x9j20ku0ku3zb.jpg?KID=imgbed,tva&amp;Expires=1632720059&amp;ssig=tlf0%2BYvVxV" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data"><div class="data-item is-center"><div class="data-item-link"><a href="/archives/"><div class="headline">Articles</div><div class="length-num">11</div></a></div></div><div class="data-item is-center"><div class="data-item-link"><a href="/categories/"><div class="headline">Categories</div><div class="length-num">3</div></a></div></div></div><hr/></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background: transparent"><nav id="nav"><span id="blog_name"><a id="site-name" href="/">LucasLYF</a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> Search</span></a></div><div id="toggle-menu"><a class="site-page"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">Lucrame:(二)项目结构<a class="post-edit-link" href="https://gitee.com/lucaslyf/websource/tree/master/source/_posts/Plugins-二-项目结构.md" title="Edited on" target="_blank"><i class="fas fa-pencil-alt"></i></a></h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">Created</span><time class="post-meta-date-created" datetime="2022-03-04T15:40:31.000Z" title="Created 2022-03-04 23:40:31">2022-03-04</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">Updated</span><time class="post-meta-date-updated" datetime="2022-11-22T13:30:58.842Z" title="Updated 2022-11-22 21:30:58">2022-11-22</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/">Lucrame-插件式应用框架</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="Lucrame:(二)项目结构"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">Post View:</span><span id="busuanzi_value_page_pv"></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
+  <script id="hbeData" type="hbeData" data-hmacdigest="11abba8aeb85f0d4fdbd5eb60d35099e824f3226da0c7588b99160f3289a4913">f85aab0133061e7f96c9eb41b3da4cd86e675498b4f4814cb8a8182e48f7f6bd30b3b807e79a542edb59548d518772d7bde1c434e395e42fa169aace4b2755f04e027a7c2e191e0c1cb89a8b7c237d0ef67c07c8a96b5b76651edfe7dd86adcd8d702b6fee0a27ed29af1fbee649c80a4ad5102852ab02374d6901dc2f693ba3644b37b8e9822afd5c1d12de09e284faeae2aab2609b685e810882c1b8c7931f141e3420cc6b48dfefe3d171fad5a052a0691eeb06e1de3b8c3f3d1a7ba02d687d0fea2c655de3063adb41562d73c4aa2c4842fa9068d0864fb508d11d7b85b883005cf460cd355a5d15a1e3bf17329091f3e986c886393f70bb4ac165f93c436d075f9501389ca2764bd5d95f1282bcac0715e40d9162b6a8b53b51d9922f07cb28e962ba3f19d62b4cfdb34cb8c90dcb1b0cd553f3adaf5d1d39f58304c61e1092472ce2bf5a1c51b19f35d52c9c483259a03b7c6f9717b43e578336a6b19292668e4699c0cf179ee96a932c0f930a6e4f18ba2395e644eaba5c1372b257e9f145595ec5b5b4c442231d98946858d0d403a9734b4f455d9f6f39bc502d57db6cdeb0f7a69c426845f43d97f08d6c4a9a2b557d1e0902b69ab48b4a55305cbbcbb83487280581178a2368e0e0468a5a0ac20ebe8964a153efbae193826f1c8341a43e4ba3f4b81f07b1ab3944f8b12aceda54960e19e8dd8d3d7a55fae13db7b8014557dd32a1d90f7ed73c243194853d8b58b4192b41a025e98800161c7875c47c4f5960efeafdd8eaa9f8f8225170b8e7e3afaa66505cec77f02a97c1007a94ee2450c72e5a44a9998541c849f1274a6c7921a3885918c0085095dcc2b13083166c0e2db4ddeedfb51aaf6fe4b8d209eeca54b76af6176188f304b2bfc453d1f2aa8a09593ff14d36b5e8c6e5a8f832dab03a8d4bf6996abd4db77d60be4a7a3840836e5cc2a537e36fbd35fb087b0d4633ab069ae9c162f64797b038b5bcadfa75a9861e7b14037aeb7310cbbdf31d17cf6b5ae75153cbbf16bccdcf37131a4aa6533329e424ba656ca4a1e477d98d14daf5c2c63f1806cea75b1b058cc357604a4c809dbdb77290fb4ca2d9ca7a24e94d24288ad0166d6b01639d8b1a174e8757515c8e0b9e7de530449dfa195e8406e3d9ccca9cdaf1978f9b63fad3a57e509123d9199fb67d692823ff65b85aea6e6d3bdbd699af5610ce15ec5e5c75e8a33b11b4e8785197adee0c26ffd508d1012882efbbbbb85cfdbdaffeb1cf3fcb2166215e8006ecb6b911850924a53af5f03a85d2297cc39dec76b89f2e13c6884eb565cad01a7f37c0a204a805aeb9f41175678f96dd2549bc7c50a9c5d13b79e3e056ac85f537601707b5df8f75e204ecf488e1a1a24fd7ad1421d68cf787663a06e4ce84e8843ab78eda04262935691ab6e0791d263dc60319c2c8efa0b90eff5f686418aaadcb8d657e42f6e9670406fcef69574375bf46432ef400d59c0d815a0d6494c49197dcc42c05847790ac627726e817ec5e344162e7efce2519fef03036ea23c62a25a363db4f9793b671d1940048b369c80bbc91d291423a1ad4f93878a44c5e845c0181a1524044e80e6f02d50525b9c2f358d2ea4379b5912140b032f2f7f1f599829a8f97c45c67dc4ade772b2040957283654c7e7e964c8af3ac17281dde8937471260daaa48188cc4a807d2991b3295d7a4b6611d6d6e66ea6683897f015c106f3ac80158886825d2d60bf0cf2f63670a4f983e17f8e0583fbfd0ffcba4f87f24a4df886f31c8ca385ce84143bf38ab18fc4d1a71336d91e24407c3ea84cc0e637053e778a87473bfe2387bed4c7ffaab57c011c3e1498a338c43309d1fec00a59f9a1578ada59aa9e7f1b6a3799e5d77defb00f591fa6804ae45c4b2bc472db9c14a38c20b98fad7d073b1fa406972854bcd22471d0f6d52b16a257e0ca0892a0e2c9e6ee673eb65f9c98570fcae191ce53287da21094968287f2d846d77c21ed51007891e345427ab13c5a6d3769779075e05ca93def414c1da49f539607fbb8240d37140990c9080c3cefb0b5778f7f3ed7d574ccbc04c78b3c92ff6bbff0a1992a796abdb9ff9b1bb9d4a221d2ccc1a5ef7058367f7304632dc6fb269830f0e1a06d736338a3e112ddd12df6db55acec1bfb756e10209eb49fb99e1370baab1c1b8b0266e272267628aae3258f6dc96a80fb3e634a24ced04a2d7eb13c33418cae84781dcca8c872648755e280e6fb8d2cbbf13cdff5beee987fe6b15beb88dfdc0bfbfb4a2c263bedae76e2165a6faa4d0ac172f291b8c7477d2a7e5050bf6f00698a88b00a1a8a4ae5111f6dc3baec3fba16c5de737292274f7ffb9864def114c008fefe1ebe5d173578d7371acbcb18e5bc7ce857c8344de67166277c012adc20496f6c7d9c09b43881fb1ce2ad8ac7e11101ee357aef959c84bf93c31bb619a1a39ffef07d580f7677ea2cd52324a7abaa647ddef0a2818fb6c9861f2e2be2c685fbcc73d9b445a5e3380cc0a5f3b273091e9cd3ee06e47d379466069b7e2a4382360c654b8b8a0c8e01ee6a990b5913f0ddb9bb141e8db99df6d3b0077155b8aeb1b2c67d9766646805c552ed06e679ae0e5f7a88ddaadab939a7b5cc77385a25088900e232add308f380b00f9369a6ec124c6b3489b7b09577f2e46ac91e9f3184a5840961783b8ea80c42472b5c2ef9b12c27a62ff49c4bf82b007a20d13694a66873653343622dc65911accb917b1d2c85b959d559c23c98f611039af7fcaf2eba46e7fedb666c3aa775690692b81c54e7d8cc1662e3dfeb1b4e600d32c1f6be7868b6c5c32580c2e62da5ef195dd44cb61dc426f0ae71291b0905af3ff0d7543e02168fb7e4f961670f6e6f0a3be1049ed3132ba91b8e0e8cf5de6ed07208b44747597a91abd56c2f8ed18220932d32bd9c88e44a9759a8777407d137a53c49fafe1569a3f42914cd19ac267db1df1bdc41d724f7d2ab6053702497d404bbb0ad82b4ffcdf3d1a26cd8146c9f1e4e701fa666c46876114936c3f7ee2babbda7a949c6c9ab39e3400f6c7164590b0acdbc76c1d712793679ca2a650a65d306ddb3b70763bfc8716ee3c904ad167120ee89d0150dd40fef6cf2c3b12bb4c9278ed498bd44c6737a7c3c216ee9862e6971b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">请输入密码</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css"></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">Author: </span><span class="post-copyright-info"><a href="mailto:undefined">人是鳄鱼的子孙</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">Link: </span><span class="post-copyright-info"><a href="http://lucaslyf.gitee.io/2022/03/04/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/">http://lucaslyf.gitee.io/2022/03/04/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">Copyright Notice: </span><span class="post-copyright-info">All articles in this blog are licensed under <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> unless stating additionally.</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/transparent" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-share.js/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/social-share.js/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2022/03/04/Lucrame-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"><img class="prev-cover" src="/transparent" onerror="onerror=null;src='/img/404.png'" alt="cover of previous post"><div class="pagination-info"><div class="label">Previous Post</div><div class="prev_info">Lucrame:(二)项目结构</div></div></a></div><div class="next-post pull-right"><a href="/2022/03/03/Lucrame-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"><img class="next-cover" src="/transparent" onerror="onerror=null;src='/img/404.png'" alt="cover of next post"><div class="pagination-info"><div class="label">Next Post</div><div class="next_info">Lucrame:(一)环境搭建</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>Catalog</span></div><div class="toc-content toc-div-class" style="display:none"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84"><span class="toc-number">2.</span> <span class="toc-text">目录结构</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Win"><span class="toc-number">2.1.</span> <span class="toc-text">Win</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Mac"><span class="toc-number">2.2.</span> <span class="toc-text">Mac</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Linux"><span class="toc-number">2.3.</span> <span class="toc-text">Linux</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer" style="background: transparent"><div id="footer-wrap"><div class="copyright">&copy;2021 - 2023 By 人是鳄鱼的子孙</div><div class="footer_custom_text">This web is my study blog.</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="Read Mode"><i class="fas fa-book-open"></i></button><button id="font-plus" type="button" title="Increase font size"><i class="fas fa-plus"></i></button><button id="font-minus" type="button" title="Decrease font size"><i class="fas fa-minus"></i></button><button id="darkmode" type="button" title="Switch Between Light And Dark Mode"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="Toggle between single-column and double-column"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="Setting"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="Table Of Contents"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="Back To Top"><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><div class="search-dialog__title" id="local-search-title">Local search</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="Search for Posts" type="text"/></div></div></div><hr/><div id="local-search-results"></div><span class="search-close-button"><i class="fas fa-times"></i></span></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="/js/search/local-search.js"></script><script>var preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = '';
+    document.getElementById('loading-box').classList.remove("loaded")
+
+  }
+}
+window.addEventListener('load',preloader.endLoading())</script><div class="js-pjax"><script>if (!window.MathJax) {
+  window.MathJax = {
+    loader: {
+      source: {
+        '[tex]/amsCd': '[tex]/amscd'
+      }
+    },
+    tex: {
+      inlineMath: [ ['$','$'], ["\\(","\\)"]],
+      tags: 'ams'
+    },
+    options: {
+      renderActions: {
+        findScript: [10, doc => {
+          for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+            const display = !!node.type.match(/; *mode=display/)
+            const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+            const text = document.createTextNode('')
+            node.parentNode.replaceChild(text, node)
+            math.start = {node: text, delim: '', n: 0}
+            math.end = {node: text, delim: '', n: 0}
+            doc.math.push(math)
+          }
+        }, ''],
+        addClass: [200,() => {
+          document.querySelectorAll('mjx-container:not([display=\'true\']').forEach( node => {
+            const target = node.parentNode
+            if (!target.classList.contains('has-jax')) {
+              target.classList.add('mathjax-overflow')
+            }
+          })
+        }, '', false]
+      }
+    }
+  }
+  
+  const script = document.createElement('script')
+  script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js'
+  script.id = 'MathJax-script'
+  script.async = true
+  document.head.appendChild(script)
+} else {
+  MathJax.startup.document.state(0)
+  MathJax.texReset()
+  MathJax.typeset()
+}</script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.min.js"></script><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/contrib/copy-tex.css"><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', '', 'katex-wrap')
+  })
+})()</script></div><script src="https://cdn.jsdelivr.net/npm/prismjs/prism.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/autoloader/prism-autoloader.min.js"></script><script src="https://cdn.jsdelivr.net/npm/prismjs/plugins/line-numbers/prism-line-numbers.min.js"></script><video muted loop id="bgvid"> <source src="/video/1.mp4" type="video/mp4"> <source src="/video/2.ogg" type="video/ogg"> <source src="/video/3.webm" type="video/webm" </video> <script> document.addEventListener("click",function(){document.getElementById('bgvid').play()}) </script> <audio id="audio" loop="loop" src="https://od.lk/s/MzZfNTcyNjUxNTZf/%E9%BB%91%E9%A9%AC%E7%8E%8B%E5%AD%90-%E9%A9%AC%E6%80%9D%E5%94%AF.mp3"> </audio> <script> var video=document.getElementById('bgvid'); video.addEventListener("timeupdate",function(){ document.getElementById('audio').play()}) </script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = [
+  'title',
+  '#config-diff',
+  '#body-wrap',
+  '#rightside-config-hide',
+  '#rightside-config-show',
+  '.js-pjax'
+]
+
+if (false) {
+  pjaxSelectors.unshift('meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]')
+}
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof chatBtnFn === 'function' && chatBtnFn()
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // Analytics
+  if (false) {
+    MtaH5.pgv()
+  }
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+
+  typeof preloader === 'object' && preloader.endLoading()
+})
+
+
+document.addEventListener('pjax:send', function () {
+  typeof preloader === 'object' && preloader.initLoading()
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+})
+
+document.addEventListener('pjax:error', (e) => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

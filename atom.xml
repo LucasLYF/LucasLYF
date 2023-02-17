@@ -3,11 +3,11 @@
   <title>LucasLYF</title>
   
   <subtitle>浮生万千，幸会矣！</subtitle>
-  <link href="http://lucaslyf.github.io/atom.xml" rel="self"/>
+  <link href="http://533933.cn/atom.xml" rel="self"/>
   
-  <link href="http://lucaslyf.github.io/"/>
+  <link href="http://533933.cn/"/>
   <updated>2023-02-17T09:33:22.328Z</updated>
-  <id>http://lucaslyf.github.io/</id>
+  <id>http://533933.cn/</id>
   
   <author>
     <name>人是鳄鱼的子孙</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Lucrame:问题记录</title>
-    <link href="http://lucaslyf.github.io/2022/03/06/Lucrame-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>http://lucaslyf.github.io/2022/03/06/Lucrame-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <link href="http://533933.cn/2022/03/06/Lucrame-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://533933.cn/2022/03/06/Lucrame-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
     <published>2022-03-05T19:29:25.000Z</published>
     <updated>2023-02-17T09:33:22.328Z</updated>
     
@@ -30,15 +30,15 @@
     
     
     
-    <category term="Lucrame-插件式应用框架" scheme="http://lucaslyf.github.io/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
+    <category term="Lucrame-插件式应用框架" scheme="http://533933.cn/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>Lucrame:(二)项目结构</title>
-    <link href="http://lucaslyf.github.io/2022/03/04/Lucrame-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://lucaslyf.github.io/2022/03/04/Lucrame-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/</id>
+    <link href="http://533933.cn/2022/03/04/Lucrame-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://533933.cn/2022/03/04/Lucrame-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/</id>
     <published>2022-03-04T15:40:31.000Z</published>
     <updated>2022-11-22T13:30:58.821Z</updated>
     
@@ -49,15 +49,15 @@
     
     
     
-    <category term="Lucrame-插件式应用框架" scheme="http://lucaslyf.github.io/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
+    <category term="Lucrame-插件式应用框架" scheme="http://533933.cn/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>Plugins:(二)项目结构</title>
-    <link href="http://lucaslyf.github.io/2022/03/03/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://lucaslyf.github.io/2022/03/03/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/</id>
+    <link href="http://533933.cn/2022/03/03/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://533933.cn/2022/03/03/Plugins-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84/</id>
     <published>2022-03-03T15:40:31.000Z</published>
     <updated>2023-02-17T09:33:22.334Z</updated>
     
@@ -68,15 +68,15 @@
     
     
     
-    <category term="Lucrame-插件式应用框架" scheme="http://lucaslyf.github.io/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
+    <category term="Lucrame-插件式应用框架" scheme="http://533933.cn/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>Lucrame:(一)环境搭建</title>
-    <link href="http://lucaslyf.github.io/2022/03/03/Lucrame-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://lucaslyf.github.io/2022/03/03/Lucrame-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://533933.cn/2022/03/03/Lucrame-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://533933.cn/2022/03/03/Lucrame-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
     <published>2022-03-02T16:00:20.000Z</published>
     <updated>2023-02-17T09:33:22.325Z</updated>
     
@@ -87,15 +87,15 @@
     
     
     
-    <category term="Lucrame-插件式应用框架" scheme="http://lucaslyf.github.io/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
+    <category term="Lucrame-插件式应用框架" scheme="http://533933.cn/categories/Lucrame-%E6%8F%92%E4%BB%B6%E5%BC%8F%E5%BA%94%E7%94%A8%E6%A1%86%E6%9E%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>Plugins:(一)环境搭建</title>
-    <link href="http://lucaslyf.github.io/2022/03/03/Plugins-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://lucaslyf.github.io/2022/03/03/Plugins-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://533933.cn/2022/03/03/Plugins-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://533933.cn/2022/03/03/Plugins-%E4%B8%80-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
     <published>2022-03-02T16:00:20.000Z</published>
     <updated>2023-02-17T09:33:22.331Z</updated>
     
@@ -106,15 +106,15 @@
     
     
     
-    <category term="Plugins-模块化插件" scheme="http://lucaslyf.github.io/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
+    <category term="Plugins-模块化插件" scheme="http://533933.cn/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>Plugins:(四)基于VTK的桌面软件显示模块代码介绍</title>
-    <link href="http://lucaslyf.github.io/2021/11/04/Plugins-%E5%9B%9B-%E5%9F%BA%E4%BA%8EVTK%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://lucaslyf.github.io/2021/11/04/Plugins-%E5%9B%9B-%E5%9F%BA%E4%BA%8EVTK%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/</id>
+    <link href="http://533933.cn/2021/11/04/Plugins-%E5%9B%9B-%E5%9F%BA%E4%BA%8EVTK%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://533933.cn/2021/11/04/Plugins-%E5%9B%9B-%E5%9F%BA%E4%BA%8EVTK%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%9D%97%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/</id>
     <published>2021-11-04T14:46:29.000Z</published>
     <updated>2022-11-15T09:48:51.805Z</updated>
     
@@ -125,15 +125,15 @@
     
     
     
-    <category term="Plugins-模块化插件" scheme="http://lucaslyf.github.io/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
+    <category term="Plugins-模块化插件" scheme="http://533933.cn/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>Plugins:(三)基于QT的桌面软件开发通用平台基本代码介绍</title>
-    <link href="http://lucaslyf.github.io/2021/08/03/Plugins-%E4%B8%89-%E5%9F%BA%E4%BA%8EQT%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%80%9A%E7%94%A8%E5%B9%B3%E5%8F%B0%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://lucaslyf.github.io/2021/08/03/Plugins-%E4%B8%89-%E5%9F%BA%E4%BA%8EQT%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%80%9A%E7%94%A8%E5%B9%B3%E5%8F%B0%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/</id>
+    <link href="http://533933.cn/2021/08/03/Plugins-%E4%B8%89-%E5%9F%BA%E4%BA%8EQT%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%80%9A%E7%94%A8%E5%B9%B3%E5%8F%B0%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://533933.cn/2021/08/03/Plugins-%E4%B8%89-%E5%9F%BA%E4%BA%8EQT%E7%9A%84%E6%A1%8C%E9%9D%A2%E8%BD%AF%E4%BB%B6%E5%BC%80%E5%8F%91%E9%80%9A%E7%94%A8%E5%B9%B3%E5%8F%B0%E5%9F%BA%E6%9C%AC%E4%BB%A3%E7%A0%81%E4%BB%8B%E7%BB%8D/</id>
     <published>2021-08-03T08:15:03.000Z</published>
     <updated>2022-11-15T09:49:00.469Z</updated>
     
@@ -144,15 +144,15 @@
     
     
     
-    <category term="Plugins-模块化插件" scheme="http://lucaslyf.github.io/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
+    <category term="Plugins-模块化插件" scheme="http://533933.cn/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>RobotCAM:(二)CMake简单介绍</title>
-    <link href="http://lucaslyf.github.io/2021/08/02/RobotCAM-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
-    <id>http://lucaslyf.github.io/2021/08/02/RobotCAM-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</id>
+    <link href="http://533933.cn/2021/08/02/RobotCAM-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://533933.cn/2021/08/02/RobotCAM-%E4%BA%8C-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E4%BB%8B%E7%BB%8D/</id>
     <published>2021-08-02T02:40:48.000Z</published>
     <updated>2022-11-15T09:49:22.228Z</updated>
     
@@ -163,15 +163,15 @@
     
     
     
-    <category term="RobotCAM-CAM微内核" scheme="http://lucaslyf.github.io/categories/RobotCAM-CAM%E5%BE%AE%E5%86%85%E6%A0%B8/"/>
+    <category term="RobotCAM-CAM微内核" scheme="http://533933.cn/categories/RobotCAM-CAM%E5%BE%AE%E5%86%85%E6%A0%B8/"/>
     
     
   </entry>
   
   <entry>
     <title>RobotCAM:(一)环境搭建</title>
-    <link href="http://lucaslyf.github.io/2021/08/01/RobotCAM-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
-    <id>http://lucaslyf.github.io/2021/08/01/RobotCAM-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
+    <link href="http://533933.cn/2021/08/01/RobotCAM-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"/>
+    <id>http://533933.cn/2021/08/01/RobotCAM-%E4%B8%80-%E9%A1%B9%E7%9B%AE%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</id>
     <published>2021-08-01T14:11:54.000Z</published>
     <updated>2023-02-17T09:33:22.343Z</updated>
     
@@ -182,15 +182,15 @@
     
     
     
-    <category term="RobotCAM-CAM微内核" scheme="http://lucaslyf.github.io/categories/RobotCAM-CAM%E5%BE%AE%E5%86%85%E6%A0%B8/"/>
+    <category term="RobotCAM-CAM微内核" scheme="http://533933.cn/categories/RobotCAM-CAM%E5%BE%AE%E5%86%85%E6%A0%B8/"/>
     
     
   </entry>
   
   <entry>
     <title>Plugins:问题记录</title>
-    <link href="http://lucaslyf.github.io/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>http://lucaslyf.github.io/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <link href="http://533933.cn/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://533933.cn/2021/07/31/Plugins-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
     <published>2021-07-30T18:03:22.000Z</published>
     <updated>2023-02-17T09:33:22.340Z</updated>
     
@@ -201,15 +201,15 @@
     
     
     
-    <category term="Plugins-模块化插件" scheme="http://lucaslyf.github.io/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
+    <category term="Plugins-模块化插件" scheme="http://533933.cn/categories/Plugins-%E6%A8%A1%E5%9D%97%E5%8C%96%E6%8F%92%E4%BB%B6/"/>
     
     
   </entry>
   
   <entry>
     <title>RobotCAM:问题记录</title>
-    <link href="http://lucaslyf.github.io/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
-    <id>http://lucaslyf.github.io/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
+    <link href="http://533933.cn/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"/>
+    <id>http://533933.cn/2021/07/31/RobotCAM-%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/</id>
     <published>2021-07-30T18:03:22.000Z</published>
     <updated>2023-02-17T09:33:22.346Z</updated>
     
@@ -220,7 +220,7 @@
     
     
     
-    <category term="RobotCAM-CAM微内核" scheme="http://lucaslyf.github.io/categories/RobotCAM-CAM%E5%BE%AE%E5%86%85%E6%A0%B8/"/>
+    <category term="RobotCAM-CAM微内核" scheme="http://533933.cn/categories/RobotCAM-CAM%E5%BE%AE%E5%86%85%E6%A0%B8/"/>
     
     
   </entry>

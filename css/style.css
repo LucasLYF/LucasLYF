@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #222;
+    font-family: "Helvetica";
+}
+
+#control {
+    position: absolute;
+    right: -20%;
+    top: 0;
+    width: 20%;
+    height: 100%;
+    padding: 1%;
+    box-sizing: border-box;
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, .5);
+    transition: all .5s linear;
+}
+
+#btn {
+    position: absolute;
+    top: 5px;
+    left: -25px;
+}
+
+#btn span {
+    display: inline-block;
+    width: 1px;
+    height: 18px;
+    margin-right: 0;
+    border-right: 3px solid #000000;
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+#btn.vertical span {
+    display: block;
+    width: 18px;
+    height: 1px;
+    margin-bottom: 4px;
+    border-bottom: 3px solid #000000;
+    border-right: 0;
+}
+
+#btn.vertical span:last-child {
+    margin-right: 0;
+}
+
+#control.slide {
+    right: 0px;
+    transition: right .5s linear;
+}
+
+#control p {
+    font-size: 3px;
+    margin-top: -10px;
+    margin-bottom: -10px;
+}
+
+#control input {
+    border: none;
+    background-color: transparent;
+    margin: -10 0;
+    outline: none;
+}
+
+#control input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    /* background-color: silver; */
+    height: 6px;
+    border-radius: 2px;
+    background: -webkit-linear-gradient(#00b7ff, #00b7ff) no-repeat #ffffff;
+    background-size: 50% 100%;
+}
+
+#control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    background-color: #aaa;
+    width: 8px;
+    height: 10px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+#control input[type="range"]::-webkit-slider-thumb:hover {
+    background: rgb(133, 237, 255);
+}
+
+#control input[type=range]::-webkit-slider-runnable-track {
+    height: 10px;
+}
+
+#control input[type=number] {
+    -webkit-appearance: none;
+    align-self: left;
+    height: 15px;
+    width: 85%;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+#tabs nav {
+    margin-top: 10px;
+    margin-bottom: 0px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    overflow: hidden;
+    background-color: transparent;
+    /* 伸缩盒模型 */
+    display: flex;
+}
+
+nav a {
+    display: block;
+    width: 100%;
+    border-right: 2px solid rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a.active {
+    background-color: #ffffff;
+}
+
+.content {
+    margin-top: 10px;
+    padding: 5px;
+    overflow-y: auto;
+    display: none;
+    height: 320px;
+}
